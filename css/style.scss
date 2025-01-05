@@ -654,6 +654,15 @@ body {
         align-items: flex-start;
         padding: 140px 0 80px;
         text-align: right;
+
+        @include media(1200) {
+            justify-content: flex-start;
+            text-align: left;
+        }
+
+        @include media(992) {
+            padding: 40px 0;
+        }
     }
 
     &__card {
@@ -663,6 +672,22 @@ body {
         left: -129px;
         width: 928px;
         min-width: 928px;
+
+        @include media(1550) {
+            top:100px;
+            width: 800px;
+            min-width: 800px;
+        }
+
+        @include media(1350) {
+            top: 300px;
+            width: 600px;
+            min-width: 600px;
+        }
+
+        @include media(1200) {
+            display: none;
+        }
     }
 
     &__title {
@@ -670,6 +695,12 @@ body {
         font-weight: bold;
         line-height: 29px;
         margin-bottom: 28px;
+
+        @include media(992) {
+            font-size: 24px;
+            line-height: 100%;
+            margin-bottom: 10px;
+        } 
     }
 
     &__description {
@@ -678,6 +709,10 @@ body {
         max-width: 755px;
         opacity: 0.5;
         letter-spacing: 2px;
+
+        @include media(992) {
+            font-size: 18px;
+        }
     }
 
     .line {
@@ -685,6 +720,11 @@ body {
         background: rgba(217, 217, 217, 0.17);
         height: 1px;
         width: 755px;
+
+        @include media(992) {
+            width: 100%;
+            margin: 20px 0;
+        }
     }
 
     .step {
@@ -692,6 +732,12 @@ body {
         flex-direction: column;
         align-items: flex-end;
         gap: 20px;
+
+        @include media(1200) {
+            width: 100%;
+            align-items: flex-start;
+            gap: 10px;
+        }
 
         &_head {
             display: flex;
@@ -701,6 +747,10 @@ body {
             h3 {
                 font-size: 26px;
                 font-weight: 600;
+
+                @include media(992) {
+                    font-size: 20px;
+                }
             }
 
             span {
@@ -711,6 +761,10 @@ body {
                 font-weight: 500;
                 letter-spacing: 3px;
                 line-height: 13px;
+
+                @include media(992) {
+                    font-size: 18px;
+                }
             }
         }
 
@@ -722,6 +776,17 @@ body {
             display: flex;
             align-items: center;
             gap: 17px;
+
+            @include media(1200) {
+                flex-direction: row-reverse;
+                justify-content: flex-start;
+                width: 100%;
+                padding: 10px 10px 10px 0;
+            }
+
+            @include media(992) {
+                align-items: flex-start;
+            }
 
             &::before {
                 content: "";
@@ -745,6 +810,15 @@ body {
                 flex-shrink: 0;
                 border-radius: 10px;
                 background: rgba(217, 217, 217, 0.06);
+
+                @include media(992) {
+                    width: 60px;
+                    height: 60px;
+
+                    img {
+                        transform: scale(0.8);
+                    }
+                }
             }
 
             &__content {
@@ -757,12 +831,28 @@ body {
                     display: flex;
                     align-items: flex-start;
                     gap: 30px;
+
+                    @include media(1200) {
+                        flex-direction: row-reverse;
+                        justify-content: flex-end;
+                        width: 100%;
+                    }
+
+                    @include media(992) {
+                        flex-direction: column-reverse;
+                        gap: 10px;
+                    }
                 }
 
                 ul {
                     display: flex;
                     align-items: center;
                     gap: 5px;
+
+                    @include media(992) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
 
                     li {
                         padding: 7px 10px 7px 7px;
@@ -771,8 +861,16 @@ body {
                         gap: 5px;
                         border-radius: 5px;
 
+                        @include media(992) {
+                            border-radius: 4px;
+                        }
+
                         span {
                             font-size: 12px;
+
+                            @include media(992) {
+                                font-size: 10px;
+                            }
                         }
 
                         &:nth-child(1) {
@@ -799,6 +897,15 @@ body {
                     font-size: 18px;
                     font-weight: 500;
 
+                    @include media(992) {
+                        font-size: 16px;
+                    }
+
+                    @include media(480) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+
                     span {
                         font-size: 12px;
                         padding: 12px 18px;
@@ -806,6 +913,12 @@ body {
                         background: rgba(30, 116, 54, 0.25);
                         border-radius: 8px;
                         line-height: 11px;
+
+                        @include media(992) {
+                            padding: 5px 10px;
+                            border-radius: 4px;
+                            font-size: 10px;
+                        }
 
                         &.text-yellow {
                             background: rgba(119, 103, 29, 0.25);
@@ -820,11 +933,14 @@ body {
                 }
 
                 p {
-                    font-size: 14px;
-                    font-weight: 300;
                     opacity: 0.5;
                     font-size: 16px;
                     line-height: 15px;
+                    font-weight: 200;
+
+                    @include media(992) {
+                        font-size: 14px;
+                    }
                 }
             }
         }
@@ -834,6 +950,16 @@ body {
             flex-direction: column;
             align-items: flex-end;
             gap: 20px;
+
+            @include media(1200) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__content {
+        @include media(1200) {
+            width: 100%;
         }
     }
 
@@ -843,6 +969,10 @@ body {
         font-weight: 200;
         opacity: 0.5;
         letter-spacing: 2px;
+
+        @include media(992) {
+            font-size: 16px;
+        }
     }
 }
 // Check end
