@@ -12,6 +12,7 @@ if (modalClasses.length) {
     modalClasses.forEach(cls => {
         const m = document.querySelector(`${cls}`);
         const mBg = document.querySelector(`${cls} .modal__bg`);
+        const mClose = document.querySelector(`${cls} .modal__close`);
         const mOpen = document.querySelectorAll(`${cls}__open`);
 
         mOpen.forEach(el => {
@@ -28,6 +29,14 @@ if (modalClasses.length) {
         mBg.onclick = () => {
             m.classList.remove('active');
             bodyVisible();
+        }
+
+        if (mClose) {
+            mClose.onclick = e => {
+                e.preventDefault();
+                m.classList.remove('active');
+                bodyVisible();
+            }
         }
     })
 }
