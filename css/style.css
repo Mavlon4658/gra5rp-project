@@ -178,6 +178,23 @@ body {
           backdrop-filter: blur(120px);
   box-shadow: 0 0 160px rgba(0, 0, 0, 0.25);
 }
+.modal__content .title {
+  font-size: 26px;
+  margin-bottom: 18px;
+  line-height: 17px;
+}
+.modal__content .subtitle {
+  font-size: 18px;
+  opacity: 0.5;
+  line-height: 12px;
+  letter-spacing: 0.8px;
+}
+.modal__content .line {
+  background: rgba(217, 217, 217, 0.16);
+  height: 1px;
+  width: 100%;
+  margin: 24px 0;
+}
 
 .main-btn {
   width: 100%;
@@ -200,42 +217,12 @@ body {
   opacity: 0.5;
 }
 
-.balance-modal__content {
-  width: 1202px;
-  padding: 40px;
-}
-.balance-modal__content .modal-bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  z-index: -1;
-}
-.balance-modal__content_in {
-  width: 460px;
-}
-.balance-modal__content_in .title {
-  font-size: 26px;
-  margin-bottom: 18px;
-  line-height: 17px;
-}
-.balance-modal__content_in .subtitle {
-  font-size: 18px;
-  line-height: 0.8px;
-  opacity: 0.5;
-}
-.balance-modal__content_in .line {
-  background: rgba(217, 217, 217, 0.16);
-  height: 1px;
-  width: 100%;
-  margin: 24px 0;
-}
-.balance-modal__content_in .form_group {
+.form_group {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.balance-modal__content_in .form_inp {
+.form_inp {
   position: relative;
   background: rgba(217, 217, 217, 0.05);
   border-radius: 8px;
@@ -243,7 +230,7 @@ body {
   z-index: 1;
   width: 100%;
 }
-.balance-modal__content_in .form_inp .icon {
+.form_inp .icon {
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -257,7 +244,7 @@ body {
   justify-content: center;
   border-radius: 4px;
 }
-.balance-modal__content_in .form_inp input {
+.form_inp input {
   width: 100%;
   height: 64px;
   padding: 0 16px 0 78px;
@@ -265,15 +252,15 @@ body {
   font-size: 20px;
   font-weight: 300;
 }
-.balance-modal__content_in .form_inp input::-moz-placeholder {
+.form_inp input::-moz-placeholder {
   color: white;
   opacity: 0.5;
 }
-.balance-modal__content_in .form_inp input::placeholder {
+.form_inp input::placeholder {
   color: white;
   opacity: 0.5;
 }
-.balance-modal__content_in .form_inp p {
+.form_inp p {
   position: absolute;
   top: 50%;
   right: 16px;
@@ -284,7 +271,8 @@ body {
   letter-spacing: 0.8px;
   opacity: 0.5;
 }
-.balance-modal__content_in .select_btn {
+
+.select_btn {
   background: rgba(217, 217, 217, 0.05);
   border-radius: 8px;
   display: flex;
@@ -296,10 +284,10 @@ body {
   padding: 16px;
   gap: 10px;
 }
-.balance-modal__content_in .select_btn input {
+.select_btn input {
   display: none;
 }
-.balance-modal__content_in .select_btn .icon {
+.select_btn .icon {
   width: 50px;
   height: 32px;
   display: flex;
@@ -308,9 +296,24 @@ body {
   background: rgba(217, 217, 217, 0.05);
   border-radius: 4px;
 }
-.balance-modal__content_in .select_btn p {
+.select_btn p {
   font-size: 20px;
   font-weight: 300;
+}
+
+.balance-modal__content {
+  width: 1202px;
+  padding: 40px;
+}
+.balance-modal__content .modal-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+}
+.balance-modal__content_in {
+  width: 460px;
 }
 .balance-modal__content_in ul {
   display: flex;
@@ -333,25 +336,6 @@ body {
 .payment-modal__content {
   width: 540px;
   padding: 40px;
-}
-.payment-modal__content .line {
-  background: rgba(217, 217, 217, 0.16);
-  height: 1px;
-  width: 100%;
-  margin: 24px 0;
-}
-.payment-modal__content .title {
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 17px;
-  margin-bottom: 18px;
-}
-.payment-modal__content .subtitle {
-  font-size: 18px;
-  line-height: 12px;
-  opacity: 0.5;
-  font-weight: 200;
-  letter-spacing: 0.8px;
 }
 .payment-modal__content ul {
   display: flex;
@@ -403,6 +387,11 @@ body {
 }
 .payment-modal__content ul input:checked ~ img {
   opacity: 1;
+}
+
+.data-modal__content {
+  width: 540px;
+  padding: 40px;
 }
 
 .home {
