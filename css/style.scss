@@ -1002,6 +1002,14 @@ body {
                 bottom: 137px;
                 filter: blur(200px);
                 z-index: -1;
+
+                @include media(992) {
+                    width: 60%;
+                    height: 70%;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
             }
 
             &-2 {
@@ -1014,12 +1022,25 @@ body {
                 bottom: 55px;
                 filter: blur(200px);
                 z-index: -1;
+
+                @include media(992) {
+                    width: 60%;
+                    height: 70%;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
             }
         }
 
         &__bg {
             width: 1430px;
             min-width: 1430px;
+
+            @include media(992) {
+                width: 100%;
+                min-width: 100%;
+            }
         }
     }
 
@@ -1027,6 +1048,15 @@ body {
         background: rgba(101, 109, 131, 0.07);
         border-radius: 16px;
         padding: 24px 30px 30px;
+
+        @include media(1600) {
+            width: calc(50% - 10px);
+        }
+
+        @include media(992) {
+            width: 100%;
+            padding: 20px;
+        }
 
         &_head {
             display: flex;
@@ -1036,8 +1066,18 @@ body {
             margin-bottom: 21px;
             border-bottom: 1px solid rgba(217, 217, 217, 0.15);
 
+            @include media(768) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
             h3 {
                 font-size: 24px;
+
+                @include media(992) {
+                    font-size: 20px;
+                }
             }
 
             ul {
@@ -1052,6 +1092,10 @@ body {
                     padding: 8.5px 10px;
                     line-height: 9px;
                     font-size: 14px;
+
+                    @include media(992) {
+                        font-size: 12px;
+                    }
                 }
             }
         }
@@ -1068,6 +1112,10 @@ body {
             display: flex;
             align-items: stretch;
             gap: 20px;
+
+            @include media(1600) {
+                flex-wrap: wrap;
+            }
         }
     }
 }
@@ -1080,6 +1128,10 @@ body {
         align-items: stretch;
         gap: 25px;
         padding: 65px 0 70px;
+
+        @include media(1100) {
+            flex-direction: column;
+        }
     }
 
     &__left {
@@ -1090,10 +1142,20 @@ body {
         border-radius: 20px;
         padding: 40px;
 
+        @include media(992) {
+            height: 500px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
         h3 {
             font-size: 30px;
             line-height: 20px;
             margin-bottom: 20px;
+
+            @include media(992) {
+                font-size: 20px;
+            }
         }
 
         p {
@@ -1102,6 +1164,10 @@ body {
             font-weight: 300;
             opacity: 0.5;
             line-height: 13px;
+
+            @include media(992) {
+                font-size: 16px;
+            }
         }
 
         a {
@@ -1118,6 +1184,10 @@ body {
                 font-size: 20px;
                 line-height: 13px;
                 font-weight: 300;
+
+                @include media(992) {
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -1126,6 +1196,15 @@ body {
         position: relative;
         width: 514px;
         flex-shrink: 0;
+
+        @include media(1300) {
+            width: 400px;
+        }
+
+        @include media(1100) {
+            width: 100%;
+            height: 500px;
+        }
 
         ul {
             position: absolute;
@@ -1161,6 +1240,12 @@ body {
                 align-items: center;
                 justify-content: center;
                 background: rgba(101, 109, 131, 0.07);
+
+                @include media(992) {
+                    min-height: 180px;
+                    height: 180px;
+                    border-radius: 10px;
+                }
             }
         }
     }
