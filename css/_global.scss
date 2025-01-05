@@ -1,0 +1,16 @@
+// Font
+$font-steppe-trial: 'Steppe Trial', sans-serif;
+// Font end
+
+@mixin media($value) {
+    @if ($value < 0) {
+        @media screen and (min-width: calc($value * (-1)) + 'px') {
+            @content;
+        }
+
+    } @else {
+        @media screen and (max-width: $value + 'px') {
+            @content;
+        }
+    }
+}
