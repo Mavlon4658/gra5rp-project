@@ -15,6 +15,10 @@ body {
     @include media(1880) {
         max-width: calc(100% - 100px);
     }
+
+    @include media(576) {
+        max-width: calc(100% - 50px);
+    }
 }
 
 // Header
@@ -25,16 +29,31 @@ body {
     width: 100%;
     z-index: 4;
 
+    @include media(1300) {
+        position: static;
+        padding-top: 30px;
+    }
+
     &__container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include media(1300) {
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 
     &__left {
         display: flex;
         align-items: center;
         gap: 50px;
+
+        @include media(1300) {
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 
     &__logo {
@@ -46,6 +65,10 @@ body {
         align-items: center;
         gap: 12px;
 
+        @include media(1300) {
+            flex-direction: column;
+        }
+
         a {
             background: rgba(72, 89, 133, 0.08);
             display: flex;
@@ -53,6 +76,10 @@ body {
             padding: 11px 22px 11px 11px;
             gap: 15px;
             font-size: 18px;
+
+            @include media(992) {
+                padding: 5px 10px;
+            }
 
             &:not(:hover):not(.active) {
                 opacity: 0.5;
@@ -79,6 +106,10 @@ body {
             font-weight: 400;
             background: rgba(72, 89, 133, 0.08);
             padding: 13px 12px 13px 25px;
+
+            @include media(992) {
+                padding: 5px 10px;
+            }
 
             .icon {
                 background: rgba(79, 123, 22, 0.25);
@@ -418,12 +449,22 @@ body {
         min-height: 1080px;
         border-bottom: 1px solid rgba(217, 217, 217, 0.17);
         padding-bottom: 60px;
+
+        @include media(992) {
+            min-height: auto;
+            padding-top: 30px;
+        }
     }
 
     .main-img {
         width: 717px;
         position: relative;
         z-index: 1;
+
+        @include media(992) {
+            width: calc(100vw - 100px);
+            max-width: 500px;
+        }
 
         .icon {
             &-1 {
@@ -436,6 +477,14 @@ body {
                 bottom: 188px;
                 z-index: -1;
                 filter: blur(200px);
+
+                @include media(992) {
+                    left: 50%;
+                    bottom: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 150px;
+                    height: 150px;
+                }
             }
 
             &-2 {
@@ -448,6 +497,14 @@ body {
                 bottom: 188px;
                 z-index: -1;
                 filter: blur(200px);
+
+                @include media(992) {
+                    left: 50%;
+                    bottom: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 150px;
+                    height: 150px;
+                }
             }
         }
 
@@ -459,6 +516,11 @@ body {
             width: 882px;
             min-width: 882px;
             z-index: -1;
+
+            @include media(992) {
+                width: calc(100% + 80px);
+                min-width: calc(100% + 80px);
+            }
         }
 
         &-bg {
@@ -476,15 +538,28 @@ body {
             align-items: center;
             gap: 12px;
 
+            @include media(992) {
+                gap: 5px;
+            }
+
             h4 {
                 font-size: 20px;
                 color: white;
                 opacity: 0.5;
                 font-weight: 200;
+
+                @include media(992) {
+                    font-size: 18px;
+                    white-space: nowrap;
+                }
             }
 
             .logo {
                 height: 50px;
+
+                @include media(992) {
+                    height: 30px;
+                }
             }
         }
     }
@@ -494,6 +569,13 @@ body {
         align-items: center;
         gap: 10px;
         margin: 3px 0 40px;
+        position: relative;
+        z-index: 1;
+
+        @include media(992) {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
 
         a {
             background: rgba(72, 89, 133, 0.08);
@@ -503,6 +585,14 @@ body {
             display: flex;
             align-items: center;
             gap: 15px;
+
+            @include media(992) {
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                padding: 10px;
+            }
 
             &.active {
                 background: #ED4A26;
@@ -545,6 +635,10 @@ body {
         max-width: 840px;
         text-align: center;
         width: 100%;
+
+        @include media(992) {
+            font-size: 16px;
+        }
     }
 }
 // Home end

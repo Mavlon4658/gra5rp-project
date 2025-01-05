@@ -82,6 +82,11 @@ body {
     max-width: calc(100% - 100px);
   }
 }
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: calc(100% - 50px);
+  }
+}
 
 .header {
   position: absolute;
@@ -90,15 +95,33 @@ body {
   width: 100%;
   z-index: 4;
 }
+@media screen and (max-width: 1300px) {
+  .header {
+    position: static;
+    padding-top: 30px;
+  }
+}
 .header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 1300px) {
+  .header__container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 .header__left {
   display: flex;
   align-items: center;
   gap: 50px;
+}
+@media screen and (max-width: 1300px) {
+  .header__left {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 .header__logo {
   flex-shrink: 0;
@@ -108,6 +131,11 @@ body {
   align-items: center;
   gap: 12px;
 }
+@media screen and (max-width: 1300px) {
+  .header__navs {
+    flex-direction: column;
+  }
+}
 .header__navs a {
   background: rgba(72, 89, 133, 0.08);
   display: flex;
@@ -115,6 +143,11 @@ body {
   padding: 11px 22px 11px 11px;
   gap: 15px;
   font-size: 18px;
+}
+@media screen and (max-width: 992px) {
+  .header__navs a {
+    padding: 5px 10px;
+  }
 }
 .header__navs a:not(:hover):not(.active) {
   opacity: 0.5;
@@ -136,6 +169,11 @@ body {
   font-weight: 400;
   background: rgba(72, 89, 133, 0.08);
   padding: 13px 12px 13px 25px;
+}
+@media screen and (max-width: 992px) {
+  .header__right a {
+    padding: 5px 10px;
+  }
 }
 .header__right a .icon {
   background: rgba(79, 123, 22, 0.25);
@@ -429,10 +467,22 @@ body {
   border-bottom: 1px solid rgba(217, 217, 217, 0.17);
   padding-bottom: 60px;
 }
+@media screen and (max-width: 992px) {
+  .home__container {
+    min-height: auto;
+    padding-top: 30px;
+  }
+}
 .home .main-img {
   width: 717px;
   position: relative;
   z-index: 1;
+}
+@media screen and (max-width: 992px) {
+  .home .main-img {
+    width: calc(100vw - 100px);
+    max-width: 500px;
+  }
 }
 .home .main-img .icon-1 {
   width: 238px;
@@ -445,6 +495,15 @@ body {
   z-index: -1;
   filter: blur(200px);
 }
+@media screen and (max-width: 992px) {
+  .home .main-img .icon-1 {
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+  }
+}
 .home .main-img .icon-2 {
   width: 238px;
   height: 238px;
@@ -456,6 +515,15 @@ body {
   z-index: -1;
   filter: blur(200px);
 }
+@media screen and (max-width: 992px) {
+  .home .main-img .icon-2 {
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+  }
+}
 .home .main-img .bg {
   position: absolute;
   top: 50%;
@@ -464,6 +532,12 @@ body {
   width: 882px;
   min-width: 882px;
   z-index: -1;
+}
+@media screen and (max-width: 992px) {
+  .home .main-img .bg {
+    width: calc(100% + 80px);
+    min-width: calc(100% + 80px);
+  }
 }
 .home .main-img-bg {
   width: 100%;
@@ -479,20 +553,44 @@ body {
   align-items: center;
   gap: 12px;
 }
+@media screen and (max-width: 992px) {
+  .home .main-img .text {
+    gap: 5px;
+  }
+}
 .home .main-img .text h4 {
   font-size: 20px;
   color: white;
   opacity: 0.5;
   font-weight: 200;
 }
+@media screen and (max-width: 992px) {
+  .home .main-img .text h4 {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+}
 .home .main-img .text .logo {
   height: 50px;
+}
+@media screen and (max-width: 992px) {
+  .home .main-img .text .logo {
+    height: 30px;
+  }
 }
 .home__content {
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 3px 0 40px;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 992px) {
+  .home__content {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
 }
 .home__content a {
   background: rgba(72, 89, 133, 0.08);
@@ -502,6 +600,15 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+@media screen and (max-width: 992px) {
+  .home__content a {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 10px;
+  }
 }
 .home__content a.active {
   background: #ED4A26;
@@ -537,6 +644,11 @@ body {
   max-width: 840px;
   text-align: center;
   width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .home p {
+    font-size: 16px;
+  }
 }
 
 .check__container {
