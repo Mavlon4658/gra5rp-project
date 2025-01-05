@@ -251,6 +251,11 @@ body {
   color: #FFF;
   border-radius: 8px;
 }
+@media screen and (max-width: 992px) {
+  .main-btn {
+    height: 55px;
+  }
+}
 .main-btn.disabled {
   opacity: 0.5;
 }
@@ -289,6 +294,11 @@ body {
   color: white;
   font-size: 20px;
   font-weight: 300;
+}
+@media screen and (max-width: 992px) {
+  .form_inp input {
+    height: 55px;
+  }
 }
 .form_inp input::-moz-placeholder {
   color: white;
@@ -343,15 +353,32 @@ body {
   width: 1202px;
   padding: 40px;
 }
+@media screen and (max-width: 1240px) {
+  .balance-modal__content {
+    width: calc(100vw - 40px);
+  }
+}
 .balance-modal__content .modal-bg {
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
   z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 992px) {
+  .balance-modal__content .modal-bg {
+    display: none;
+  }
 }
 .balance-modal__content_in {
   width: 460px;
+}
+@media screen and (max-width: 992px) {
+  .balance-modal__content_in {
+    width: 100%;
+  }
 }
 .balance-modal__content_in ul {
   display: flex;
@@ -375,6 +402,11 @@ body {
   width: 540px;
   padding: 40px;
 }
+@media screen and (max-width: 580px) {
+  .payment-modal__content {
+    width: calc(100% - 40px);
+  }
+}
 .payment-modal__content ul {
   display: flex;
   flex-direction: column;
@@ -390,6 +422,11 @@ body {
   position: relative;
   z-index: 1;
   gap: 6px;
+}
+@media screen and (max-width: 992px) {
+  .payment-modal__content ul li {
+    height: 120px;
+  }
 }
 .payment-modal__content ul input {
   position: absolute;

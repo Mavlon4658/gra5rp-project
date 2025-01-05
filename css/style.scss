@@ -194,6 +194,10 @@ body {
     color: #FFF;
     border-radius: 8px;
 
+    @include media(992) {
+        height: 55px;
+    }
+
     &.disabled {
         opacity: 0.5;
     }
@@ -236,6 +240,10 @@ body {
             color: white;
             font-size: 20px;
             font-weight: 300;
+
+            @include media(992) {
+                height: 55px;
+            }
 
             &::placeholder {
                 color: white;
@@ -296,16 +304,29 @@ body {
         width: 1202px;
         padding: 40px;
 
+        @include media(1240) {
+            width: calc(100vw - 40px);
+        }
+
         .modal-bg {
             position: absolute;
             top: 0;
             right: 0;
             height: 100%;
             z-index: -1;
+            object-fit: cover;
+
+            @include media(992) {
+                display: none;
+            }
         }
 
         &_in {
             width: 460px;
+
+            @include media(992) {
+                width: 100%;
+            }
 
             ul {
                 display: flex;
@@ -339,6 +360,10 @@ body {
         width: 540px;
         padding: 40px;
 
+        @include media(580) {
+            width: calc(100% - 40px);
+        }
+
         ul {
             display: flex;
             flex-direction: column;
@@ -354,6 +379,10 @@ body {
                 position: relative;
                 z-index: 1;
                 gap: 6px;
+
+                @include media(992) {
+                    height: 120px;
+                }
             }
 
             input {
